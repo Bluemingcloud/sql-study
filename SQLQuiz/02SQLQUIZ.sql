@@ -2,15 +2,15 @@
 --EMPLOYEES 테이블 에서 이름, 입사일자 컬럼으로 변경해서 이름순으로 오름차순 출력 합니다.
 --조건 1) 이름 컬럼은 first_name, last_name을 붙여서 출력합니다.
 --조건 2) 입사일자 컬럼은 xx/xx/xx로 저장되어 있습니다. xxxxxx형태로 변경해서 출력합니다.
- SELECT CONCAT(FIRST_NAME, CONCAT(' ', LAST_NAME)), 
-        REPLACE(HIRE_DATE, '/', '') 
+ SELECT CONCAT(FIRST_NAME || ' ', LAST_NAME) AS 이름, 
+        REPLACE(HIRE_DATE, '/', '') AS 입사일자 
  FROM EMPLOYEES 
  ORDER BY FIRST_NAME ASC;
 
 --문제 2.
 --EMPLOYEES 테이블 에서 phone_numbe컬럼은 ###.###.####형태로 저장되어 있다
 --여기서 처음 세 자리 숫자 대신 서울 지역변호 (02)를 붙여 전화 번호를 출력하도록 쿼리를 작성하세요
- SELECT CONCAT('(02)', PHONE_NUMBER) FROM EMPLOYEES;
+ SELECT CONCAT('(02)', SUBSTR(PHONE_NUMBER, 4)) AS 전화번호 FROM EMPLOYEES;
 
 --문제 3. EMPLOYEES 테이블에서 JOB_ID가 it_prog인 사원의 이름(first_name)과 급여(salary)를 출력하세요.
 --조건 1) 비교하기 위한 값은 소문자로 입력해야 합니다.(힌트 : lower 이용)

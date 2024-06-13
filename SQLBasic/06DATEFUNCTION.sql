@@ -1,0 +1,34 @@
+-- 날짜 함수
+
+-- SYSDATE 현재 날짜 반환
+SELECT SYSDATE FROM DUAL;
+
+-- SYSTIMESTAMP 현재 날짜와 시간 반환
+SELECT SYSTIMESTAMP FROM DUAL;
+
+-- 날짜 연산
+-- 항상 일(DAY) 기준으로 더하거나 빼진다.
+ SELECT SYSDATE AS 오늘,
+        SYSDATE + 1 AS 내일,
+        SYSDATE - 1 AS 어제
+ FROM DUAL;
+
+-- 숫자 함수 사용 가능
+ SELECT FIRST_NAME,
+        HIRE_DATE,
+        SYSDATE AS TODAY,
+        CEIL((SYSDATE - HIRE_DATE) / 7) AS WEEKS,
+        CEIL((SYSDATE - HIRE_DATE) / 365) AS YEARS
+ FROM EMPLOYEES;
+ 
+ -- 날짜의 반올림, 절삭
+ SELECT ROUND(SYSDATE), TRUNC(SYSDATE) FROM DUAL; -- DAY 기준으로 반올림, 절삭
+ SELECT ROUND(SYSDATE, 'MONTH'), TRUNC(SYSDATE, 'MONTH') FROM DUAL; -- MONTH 기준으로 반올림, 절삭
+ SELECT ROUND(SYSDATE, 'YEAR'), TRUNC(SYSDATE, 'YEAR') FROM DUAL; -- YEAR 기준으로 반올림, 절삭
+ 
+ SELECT HIRE_DATE, 
+        ROUND(HIRE_DATE, 'YEAR') AS ROUND, 
+        TRUNC(HIRE_DATE, 'YEAR') AS TRUNC 
+ FROM EMPLOYEES;
+ 
+    
