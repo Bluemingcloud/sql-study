@@ -24,7 +24,7 @@ SELECT JOB_ID, SALARY,
        CASE JOB_ID WHEN 'IT_PROG'  THEN SALARY * 1.1
                    WHEN 'AD_VP'    THEN SALARY * 1.2
                    WHEN 'FI_MGR'   THEN SALARY * 1.3
-            ELSE SALARY
+                   ELSE SALARY
        END AS ±Þ¿©
 FROM EMPLOYEES;
 

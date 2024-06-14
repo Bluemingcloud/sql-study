@@ -4,21 +4,21 @@ SELECT  MAX(SALARY),
         SUM(SALARY),
         AVG(SALARY),
         COUNT(SALARY)
-FROM EMPLOYEES
-WHERE JOB_ID LIKE 'SA%';
+FROM    EMPLOYEES
+WHERE   JOB_ID LIKE 'SA%';
 
 -- MIN, MAX 는 날짜와 문자에도 적용됩니다.
 SELECT  MIN(HIRE_DATE),
         MAX(HIRE_DATE),
         MIN(FIRST_NAME),
         MAX(LAST_NAME)
-FROM EMPLOYEES;
+FROM    EMPLOYEES;
 
 -- COUNT 두가지 사용방법
 SELECT  COUNT(*),               -- 전체 행 수
         COUNT(COMMISSION_PCT),   -- COMMISSION_PCT 중 NULL 이 아닌 값의 행 수
         COUNT(DISTINCT DEPARTMENT_ID)
-FROM EMPLOYEES;
+FROM    EMPLOYEES;
 -- 조건절과 같이 사용 가능
 SELECT MAX(COMMISSION_PCT) FROM EMPLOYEES WHERE DEPARTMENT_ID = 80;
 
@@ -29,7 +29,7 @@ SELECT  FIRST_NAME,
         AVG(SALARY) OVER(), 
         COUNT(*)    OVER(), 
         SUM(SALARY) OVER() 
-FROM EMPLOYEES;
+FROM    EMPLOYEES;
 
 -----------------------------------------------------------------------
 -- GROUP BY
