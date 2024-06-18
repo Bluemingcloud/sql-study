@@ -62,3 +62,68 @@ SELECT EMPLOYEE_ID FROM EMPLOYEES WHERE JOB_ID = 'IT_PROG';
 UPDATE EMPS
 SET SALARY = 1000
 WHERE EMPLOYEE_ID IN (SELECT EMPLOYEE_ID FROM EMPLOYEES WHERE JOB_ID = 'IT_PROG');
+--------------------------------------------------------------------------------
+-- DELETE
+-- 트랜잭션이 있긴 하지만, 삭제하기 전에 반드시 SELECT문으로 삭제 조건에 해당하는 데이터를 확인하는 습관을 들이자!
+SELECT * FROM EMPS WHERE EMPLOYEE_ID = 148;
+
+DELETE FROM EMPS WHERE EMPLOYEE_ID = 148; -- KEY를 통해서 지우는 편이 좋다.
+SELECT * FROM EMPS;
+ROLLBACK;
+
+-- DELETE 문도 서브쿼리 사용 가능
+DELETE FROM EMPS WHERE EMPLOYEE_ID IN (SELECT EMPLOYEE_ID FROM EMPLOYEES WHERE DEPARTMENT_ID = 80);
+SELECT EMPLOYEE_ID FROM EMPLOYEES WHERE DEPARTMENT_ID = 80;
+
+-- DELETE 문이 전부 실행되는 것은 아니다
+-- 테이블이 연관관계(FK) 제약을 가지고 있다면, 지워지지 않는다. (참조무결성 제약)
+SELECT * FROM EMPLOYEES;
+SELECT * FROM DEPARTMENTS;
+
+DELETE FROM DEPARTMENTS WHERE DEPARTMENT_ID = 100; -- EMPLOYEES 테이블에서 사용중인 키값
+
+--------------------------------------------------------------------------------
+-- MERGE
+-- 타겟테이블 데이터가 있으면 UPDATE, 없으면 INSERT 구문을 수행하는 병합
+
+-- 첫번째 방법
+SELECT * FROM EMPS;
+
+MERGE INTO EMPS A -- 타겟테이블
+USING (SELECT * FROM EMPLOYEES WHERE JOB_ID = 'IT_PROG') B -- 합칠테이블
+ON (A.EMPLOYEE_ID = B.EMPLOYEE_ID) -- 연결할 키
+WHEN MATCHED THEN -- 일치하는 경우
+    UPDATE SET A.SALARY = B.SALARY,
+               A.COMMISSION_PCT = B.COMMISSION_PCT,
+               A.HIRE_DATE = SYSDATE 
+               -- ... 생략
+WHEN NOT MATCHED THEN -- 일치하지 않는 경우
+    INSERT (EMPLOYEE_ID, LAST_NAME, EMAIL, HIRE_DATE, JOB_ID) 
+    VALUES (B.EMPLOYEE_ID, B.LAST_NAME, B.EMAIL, B.HIRE_DATE, B.JOB_ID);
+ROLLBACK;
+SELECT * FROM EMPS;
+
+-- 두번째 방법
+-- 서브쿼리절로 다른테이블을 가져오는게 아니라, DUAL을 사용해 직접 값을 넣을 수 있다.
+MERGE INTO EMPS A
+USING DUAL
+ON (A.EMPLOYEE_ID = 107) -- 조건
+WHEN MATCHED THEN -- 일치하면
+    UPDATE SET A.SALARY = 10000,
+               A.COMMISSION_PCT = 0.1,
+               A.DEPARTMENT_ID = 100
+WHEN NOT MATCHED THEN -- 일치하지 않으면
+    INSERT (EMPLOYEE_ID, LAST_NAME, EMAIL, HIRE_DATE, JOB_ID)
+    VALUES (107, 'HONG', 'EXAMPLE', SYSDATE, 'DBA');
+
+ROLLBACK;
+SELECT * FROM EMPS;
+--------------------------------------------------------------------------------
+DROP TABLE EMPS; -- TABLE 삭제
+
+-- CTAS 
+-- 테이블 구조 복사
+CREATE TABLE EMPS AS (SELECT * FROM EMPLOYEES); -- 데이터까지 복사
+SELECT * FROM EMPS;
+
+CREATE TABLE EMPS AS (SELECT * FROM EMPLOYEES WHERE 1 = 2); -- 구조만 복사
