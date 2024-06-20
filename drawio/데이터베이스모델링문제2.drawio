@@ -1,0 +1,91 @@
+<mxfile host="app.diagrams.net" modified="2024-06-20T06:59:05.554Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="CBiUbcVRQNm6w4EwMfka" version="24.5.5" type="device">
+  <diagram name="페이지-1" id="xANOE6lo8zzCrHwqu1kx">
+    <mxGraphModel dx="1591" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-1" value="회원" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-2" value="강의과정" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="540" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-3" value="강의신청" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-4" value="훈련일지" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-6" value="상담일지" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-7" value="건의사항" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-8" value="ID" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="150" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-9" value="PW" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="150" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-10" value="회원번호" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="150" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-11" value="번호" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="293" y="240" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-12" value="이미지" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="343" y="240" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-13" value="학생코드" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="393" y="240" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-14" value="이름" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="443" y="240" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-15" value="연락처" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="433" y="320" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-16" value="주민번호" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="363" y="320" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-17" value="상태" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="303" y="320" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-18" value="최종상담일" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="493" y="320" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-19" value="강의코드" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="130" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-20" value="과정명명" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="130" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-21" value="담당교수" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="130" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-22" value="강의개강일" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="130" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-23" value="강의종료일" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="190" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-24" value="요일" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="190" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-25" value="강의타입" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="190" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-26" value="모집인원" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="180" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-27" value="강의목록" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="540" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="74gFVv3BV6pXBn0HXCT6-28" value="강의신청" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="368" y="540" width="90" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

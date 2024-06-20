@@ -37,6 +37,9 @@ ALTER SEQUENCE DEPTS_SEQ INCREMENT BY 10;
 INSERT INTO DEPTS VALUES(DEPTS_SEQ.NEXTVAL, 'EXAMPLE2');
 SELECT * FROM DEPTS;
 
+-- SEQUENCE 삭제
+DROP SEQUENCE DEPTS_SEQ;
+
 -- 시퀀스가 이미 사용되고 있다면, DROP 하면 안됩니다.
 -- 만약 시퀀스를 초기화 해야한다면?
 -- 시퀀스 증가값을 음수로 만들어서 초기화 인것처럼 쓸 수는 있습니다.
